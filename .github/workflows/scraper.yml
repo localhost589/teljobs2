@@ -12,6 +12,8 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout code
@@ -39,3 +41,11 @@ jobs:
         # Puppeteer cache configuration for GHA
         PUPPETEER_CACHE_DIR: ${{ github.workspace }}/.cache
       run: node scraper.js
+
+    - name: Commit Job History
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add processed_jobs.json
+        git diff-index --quiet HEAD || git commit -m "Update job history [skip ci]"
+        git push

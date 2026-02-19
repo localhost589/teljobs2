@@ -109,6 +109,9 @@ async function verifyWithAI(job) {
     }
 }
 
+const fs = require('fs');
+const HISTORY_FILE = 'processed_jobs.json';
+
 (async () => {
     console.log("Starting Glints Scraper...");
     const browser = await puppeteer.launch({
@@ -117,7 +120,19 @@ async function verifyWithAI(job) {
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
-    const processedJobs = new Set(); // To avoid duplicates in this run
+    let processedJobs = new Set();
+
+    // Load history
+    if (fs.existsSync(HISTORY_FILE)) {
+        try {
+            const data = fs.readFileSync(HISTORY_FILE, 'utf8');
+            const json = JSON.parse(data);
+            processedJobs = new Set(json);
+            console.log(`Loaded ${processedJobs.size} processed jobs from history.`);
+        } catch (e) {
+            console.error("Error reading history file:", e.message);
+        }
+    }
 
     try {
         const page = await browser.newPage();
@@ -258,6 +273,16 @@ async function verifyWithAI(job) {
         console.error("Fatal Error:", error);
     } finally {
         await browser.close();
+
+        // Save history (Limit to last 1000 to prevent infinite growth)
+        try {
+            const historyArray = Array.from(processedJobs).slice(-1000);
+            fs.writeFileSync(HISTORY_FILE, JSON.stringify(historyArray, null, 2));
+            console.log("Updated job history saved.");
+        } catch (e) {
+            console.error("Error saving history:", e.message);
+        }
+
         console.log("Scraper finished.");
     }
 })();
