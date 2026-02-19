@@ -2,10 +2,8 @@ name: Glints Hourly Scraper
 
 on:
   schedule:
-    # Run at 00:07, 03:07, etc. (Shifted to avoid :00 queue)
-    - cron: '7 0,3,6,9,12,15,18,21 * * *'
-    # Run at 01:37, 04:37, etc. (Shifted to avoid :30 queue)
-    - cron: '37 1,4,7,10,13,16,19,22 * * *'
+    # Run every hour at minute 0 (e.g. 14:00, 15:00, ...)
+    - cron: '0 * * * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
