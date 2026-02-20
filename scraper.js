@@ -17,8 +17,8 @@ const TARGET_URLS = [
     "https://glints.com/id/opportunities/jobs/explore?keyword=IT&country=ID&locationId=3a47657b-facc-45dc-9d7f-1c6fb25f49d4&locationName=Kab.+Deli+Serdang%2C+Sumatera+Utara&lowestLocationLevel=3&page=1",
     // Office Boy
     "https://glints.com/id/opportunities/jobs/explore?keyword=Office+Boy+%2F+Office+Girl&country=ID&locationId=3a47657b-facc-45dc-9d7f-1c6fb25f49d4&locationName=Kab.+Deli+Serdang%2C+Sumatera+Utara&lowestLocationLevel=3&page=1",
-    // JobStreet
-    "https://id.jobstreet.com/id/jobs/in-Medan-Sumatera-Utara?source=FE_HOME&jobId=90461280&type=standard",
+    // JobStreet Medan Terbaru
+    "https://id.jobstreet.com/id/jobs/in-Medan-Sumatera-Utara?sortmode=listeddate",
     // Glints Medan Terbaru (sortBy=LATEST)
     "https://glints.com/id/opportunities/jobs/explore?country=ID&locationId=a6f7a20f-7172-4436-a418-afc91020ba0f&locationName=Medan%2C+Sumatera+Utara&lowestLocationLevel=3&sortBy=LATEST"
 ];
@@ -81,7 +81,7 @@ async function sendTelegramMessage(message) {
         const response = await axios.post(url, {
             chat_id: chatId,
             text: message,
-            parse_mode: 'Markdown'
+            parse_mode: 'HTML'
         });
         console.log("Telegram message sent:", response.data.ok);
     } catch (error) {
@@ -89,50 +89,9 @@ async function sendTelegramMessage(message) {
     }
 }
 
-// Send notification to both WhatsApp and Telegram
+// Send notification to Telegram
 async function sendNotification(message) {
-    // await sendFonnteMessage(message);
     await sendTelegramMessage(message);
-}
-
-async function verifyWithAI(job) {
-    console.log(`Verifying job with AI: ${job.title} at ${job.company}`);
-
-    // Explicitly check for blacklist before AI to save credits
-    if (BLACKLIST_COMPANIES.some(b => job.company.toUpperCase().includes(b))) {
-        return { valid: false, reason: "Blacklisted Company (Alfa Scorpii)" };
-    }
-
-    try {
-        const response = await axios.post("https://openrouter.ai/api/v1/chat/completions", {
-            model: "google/gemini-2.0-flash-001", // Fast and cheap model
-            messages: [
-                {
-                    role: "system",
-                    content: "You are a job Verification Assistant. Your task is to verify if a job posting looks legitimate, fresh, and is NOT a scam. The user specifically wants to AVOID 'PT ALFA SCORPII' (which is already filtered, but keep it in mind). Verify the job title and company seem professional. If the job seems like a generic scam or low-quality listing, mark it invalid. valid: true/false. reason: short explanation."
-                },
-                {
-                    role: "user",
-                    content: `Analyze this job posting details:\n${job.details}\n\nLink: ${job.link}\n\nIs this job legitimate, fresh (look for 'updated x days ago', max 30 days), and worth applying to? Return ONLY JSON: {"valid": boolean, "reason": "string"}`
-                }
-            ]
-        }, {
-            headers: {
-                "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
-                "Content-Type": "application/json"
-            }
-        });
-
-        const content = response.data.choices[0].message.content;
-        // Clean JSON string
-        const jsonString = content.replace(/```json/g, '').replace(/```/g, '').trim();
-        return JSON.parse(jsonString);
-
-    } catch (error) {
-        console.error("AI Verification failed:", error.message);
-        // Fallback: If AI fails, assume valid but warn
-        return { valid: true, reason: "AI Check Failed (Network/API Error)" };
-    }
 }
 
 const fs = require('fs');
@@ -335,19 +294,14 @@ const HISTORY_FILE = 'processed_jobs.json';
                         continue;
                     }
 
-                    // 2. AI Verification
-                    const verification = await verifyWithAI(job);
+                    // Send Direct Notification (AI Removed)
+                    console.log(`Sending notification for: ${job.title} at ${job.company}`);
+                    const msg = `✅ <b>Loker Baru</b>\n\n📋 <b>Judul</b>: ${job.title}\n🏢 <b>Perusahaan</b>: ${job.company}\n\n🔗 <a href="${job.link}">Buka Lowongan</a>\n\n🔥 #Semangat Arfi`;
+                    await sendNotification(msg);
+                    notificationsSent++;
+                    totalNotificationsSent++;
 
-                    if (verification.valid) {
-                        const msg = `✅ *Job Verified*\n\n📋 *Title*: ${job.title}\n🏢 *Company*: ${job.company}\n🤖 *AI Reason*: ${verification.reason}\n\n🔗 ${job.link}\n\n🔥 #Semangat Arfi`;
-                        await sendNotification(msg);
-                        notificationsSent++;
-                        totalNotificationsSent++;
-                    } else {
-                        console.log(`Skipped (AI Reject): ${job.title} - ${verification.reason}`);
-                    }
-
-                    await delay(1000); // Rate limit protection for API/Telegram
+                    await delay(1000); // Rate limit protection for Telegram
                 }
 
             } catch (err) {
@@ -359,12 +313,12 @@ const HISTORY_FILE = 'processed_jobs.json';
 
         if (totalNotificationsSent === 0) {
             console.log("No new jobs found in this run. Sending update.");
-            await sendNotification("LOKER BELUM ADA FI");
+            // await sendNotification("LOKER BELUM ADA FI");
         }
 
     } catch (error) {
         console.error("Fatal Error:", error);
-        await sendNotification(`⚠️ *SCRAPER CRASHED*\n\nError: ${error.message}\n\nCheck GitHub Actions logs.`);
+        await sendNotification(`⚠️ <b>SCRAPER CRASHED</b>\n\nError: ${error.message}\n\nCheck GitHub Actions logs.`);
     } finally {
         await browser.close();
 
