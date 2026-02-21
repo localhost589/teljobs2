@@ -20,7 +20,9 @@ const TARGET_URLS = [
     // JobStreet Medan Terbaru
     "https://id.jobstreet.com/id/jobs/in-Medan-Sumatera-Utara?sortmode=listeddate",
     // Glints Medan Terbaru (sortBy=LATEST)
-    "https://glints.com/id/opportunities/jobs/explore?country=ID&locationId=a6f7a20f-7172-4436-a418-afc91020ba0f&locationName=Medan%2C+Sumatera+Utara&lowestLocationLevel=3&sortBy=LATEST"
+    "https://glints.com/id/opportunities/jobs/explore?country=ID&locationId=a6f7a20f-7172-4436-a418-afc91020ba0f&locationName=Medan%2C+Sumatera+Utara&lowestLocationLevel=3&sortBy=LATEST",
+    // LokerMedan
+    "https://lokermedan.co.id/"
 ];
 
 const BLACKLIST_COMPANIES = ["PT ALFA SCORPII", "ALFA SCORPII"];
@@ -262,9 +264,56 @@ const HISTORY_FILE = 'processed_jobs.json';
                         });
                         return unique;
                     });
+                } else if (url.includes('lokermedan.co.id')) {
+                    // --- LOKERMEDAN SCRAPING LOGIC ---
+                    console.log("Detected LokerMedan URL");
+                    await delay(3000);
+
+                    jobs = await page.evaluate(() => {
+                        const extracted = [];
+                        const links = Array.from(document.querySelectorAll('a'))
+                            .filter(a => a.href && a.href.includes('-loker-') && a.href.endsWith('.html') && !a.href.includes('api.whatsapp.com'));
+
+                        links.forEach(linkEl => {
+                            const title = linkEl.innerText.trim() || linkEl.title || "Unknown";
+                            if (title.length > 5 && title.toLowerCase() !== "selengkapnya" && title.toLowerCase() !== "apply") {
+                                let details = "";
+                                const container = linkEl.closest('.job-item, .card, .post, article, div[class*="item"], div[class*="col-"]');
+                                if (container) {
+                                    details = container.innerText.trim();
+                                }
+
+                                // Try to extract company from title "Loker [Title] [Company] ..."
+                                let company = "LokerMedan";
+                                const titleParts = title.split('-');
+                                if (titleParts.length > 1) {
+                                    company = titleParts[titleParts.length - 1].trim(); // Usually company or location is at the end
+                                }
+
+                                extracted.push({
+                                    title: title,
+                                    company: company,
+                                    link: linkEl.href,
+                                    details: details || title
+                                });
+                            }
+                        });
+
+                        // Filter duplicates
+                        const unique = [];
+                        const seen = new Set();
+                        extracted.forEach(item => {
+                            if (!seen.has(item.link)) {
+                                seen.add(item.link);
+                                unique.push(item);
+                            }
+                        });
+                        return unique;
+                    });
                 }
 
                 if (jobs.length === 0) {
+
                     console.log(`No jobs found on ${url}`);
                 }
 
