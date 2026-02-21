@@ -47,7 +47,7 @@ function isFresh(text) {
     const dayMatch = lower.match(/(\d+)\s*(hari|day)/);
     if (dayMatch) {
         const days = parseInt(dayMatch[1]);
-        return days <= 14; // Limit increased to 14 days
+        return days <= 3; // Limit 3 days
     }
 
     // "minggu" or "bulan" -> Old
@@ -344,7 +344,7 @@ const HISTORY_FILE = 'processed_jobs.json';
                     processedJobs.add(uniqueId);
 
                     // 0. DATE Filter
-                    if (!isFresh(job.details)) {
+                    if (!isFresh(job.details) && !job.link.includes('lokermedan.co.id')) {
                         console.log(`Skipped (Old/No Date): ${job.title} - ${job.company}`);
                         continue;
                     }
