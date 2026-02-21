@@ -116,7 +116,7 @@ const HISTORY_FILE = 'processed_jobs.json';
         try {
             const data = fs.readFileSync(HISTORY_FILE, 'utf8');
             const json = JSON.parse(data);
-            processedJobs = new Set(json);
+            processedJobs = new Set(json.map(x => typeof x === 'string' ? x.toLowerCase().trim() : x));
             console.log(`Loaded ${processedJobs.size} processed jobs from history.`);
         } catch (e) {
             console.error("Error reading history file:", e.message);
@@ -343,7 +343,7 @@ const HISTORY_FILE = 'processed_jobs.json';
                         break;
                     }
 
-                    const uniqueId = `${job.title}-${job.company}`;
+                    const uniqueId = `${job.title.trim().toLowerCase()}-${job.company.trim().toLowerCase()}`;
                     if (processedJobs.has(uniqueId)) continue;
                     processedJobs.add(uniqueId);
 
