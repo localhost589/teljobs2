@@ -114,9 +114,56 @@ async function sendTelegramMessage(message) {
     }
 }
 
-// Send notification to Telegram
+async function sendEmailNotification(message) {
+    const resendApiKey = process.env.RESEND_API_KEY;
+    const emailTo = process.env.EMAIL_TO;
+
+    if (!resendApiKey || !emailTo) {
+        console.log("Email not configured, skipping email notification.");
+        return;
+    }
+
+    try {
+        // Convert Telegram HTML format to email-friendly HTML
+        const emailHtml = `
+            <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 12px 12px 0 0;">
+                    <h2 style="color: white; margin: 0;">🔍 TelJobs — Lowongan Baru!</h2>
+                </div>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 0 0 12px 12px; border: 1px solid #e9ecef;">
+                    ${message.replace(/\\n/g, '<br>').replace(/\n/g, '<br>')}
+                </div>
+                <p style="color: #6c757d; font-size: 12px; text-align: center; margin-top: 15px;">Dikirim otomatis oleh TelJobs Scraper</p>
+            </div>
+        `;
+
+        const response = await axios.post('https://api.resend.com/emails', {
+            from: 'TelJobs Bot <onboarding@resend.dev>',
+            to: [emailTo],
+            subject: `🔍 Lowongan Kerja Baru — ${new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}`,
+            html: emailHtml
+        }, {
+            headers: {
+                'Authorization': `Bearer ${resendApiKey}`,
+                'Content-Type': 'application/json'
+            }
+        });
+
+        console.log("Email notification sent via Resend:", response.data.id);
+    } catch (error) {
+        console.error("Failed to send email notification:", error.response?.data?.message || error.message);
+    }
+}
+
+// Send notification to all configured channels
 async function sendNotification(message) {
     await sendTelegramMessage(message);
+    await sendEmailNotification(message);
+
+    // Send to WhatsApp if configured
+    if (process.env.FONNTE_TOKEN && process.env.FONNTE_TOKEN !== 'your_fonnte_token_here') {
+        await sendFonnteMessage(message);
+    }
 }
 
 const fs = require('fs');
