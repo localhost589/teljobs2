@@ -1,59 +1,5 @@
 [
   {
-    "id": "guru bahasa inggris-bimbel rider - siska w***",
-    "title": "Guru Bahasa Inggris",
-    "company": "Bimbel Rider - Siska W***",
-    "firstSeen": "2026-08-23T17:14:13.623Z",
-    "lastSeen": "2026-08-23T22:13:34.159Z",
-    "seenCount": 4,
-    "lastNotified": "2026-08-23T17:14:13.623Z"
-  },
-  {
-    "id": "kasir restoran-resto asoka corner",
-    "title": "Kasir Restoran",
-    "company": "Resto Asoka Corner",
-    "firstSeen": "2026-08-23T22:13:34.158Z",
-    "lastSeen": "2026-09-25T00:11:02.791Z",
-    "seenCount": 51,
-    "lastNotified": "2026-08-23T22:13:34.158Z"
-  },
-  {
-    "id": "social media-cannu 11pm",
-    "title": "SOCIAL MEDIA",
-    "company": "CANNU 11PM",
-    "firstSeen": "2026-08-24T03:44:34.690Z",
-    "lastSeen": "2026-09-24T13:06:02.549Z",
-    "seenCount": 264,
-    "lastNotified": "2026-08-24T03:44:34.690Z"
-  },
-  {
-    "id": "staff admin-pt hokinda citralestari",
-    "title": "Staff Admin",
-    "company": "PT Hokinda Citralestari",
-    "firstSeen": "2026-08-24T03:45:26.653Z",
-    "lastSeen": "2026-09-25T00:10:37.257Z",
-    "seenCount": 365,
-    "lastNotified": "2026-08-24T03:45:26.653Z"
-  },
-  {
-    "id": "customer support engineer-pt kinarya alihdaya mandiri",
-    "title": "Customer Support Engineer",
-    "company": "PT Kinarya Alihdaya Mandiri",
-    "firstSeen": "2026-08-24T03:45:44.269Z",
-    "lastSeen": "2026-08-31T00:03:22.178Z",
-    "seenCount": 27,
-    "lastNotified": "2026-08-24T03:45:44.269Z"
-  },
-  {
-    "id": "management trainee (bisnis klik nss)-nusantara sakti group",
-    "title": "Management Trainee (Bisnis Klik NSS)",
-    "company": "Nusantara Sakti Group",
-    "firstSeen": "2026-08-24T03:46:41.668Z",
-    "lastSeen": "2026-09-19T16:11:40.496Z",
-    "seenCount": 2,
-    "lastNotified": "2026-08-24T03:46:41.668Z"
-  },
-  {
     "id": "rider kopi keliling-fourme coffee",
     "title": "Rider kopi keliling",
     "company": "Fourme Coffee",
@@ -5278,8 +5224,8 @@
     "title": "Facebook",
     "company": "LokerMedan",
     "firstSeen": "2026-09-12T15:58:26.095Z",
-    "lastSeen": "2026-09-29T01:24:16.527Z",
-    "seenCount": 30,
+    "lastSeen": "2026-09-29T09:18:35.747Z",
+    "seenCount": 31,
     "lastNotified": "2026-09-12T15:58:26.095Z"
   },
   {
@@ -5287,8 +5233,8 @@
     "title": "Twitter",
     "company": "LokerMedan",
     "firstSeen": "2026-09-12T15:58:26.095Z",
-    "lastSeen": "2026-09-29T01:24:16.527Z",
-    "seenCount": 30,
+    "lastSeen": "2026-09-29T09:18:35.747Z",
+    "seenCount": 31,
     "lastNotified": "2026-09-12T15:58:26.095Z"
   },
   {
@@ -8998,5 +8944,59 @@
     "lastSeen": "2026-09-29T01:23:51.471Z",
     "seenCount": 1,
     "lastNotified": "2026-09-29T01:23:51.471Z"
+  },
+  {
+    "id": "relationship officer program-pt bank central asia tbk (bca)",
+    "title": "RELATIONSHIP OFFICER PROGRAM",
+    "company": "PT Bank Central Asia Tbk (BCA)",
+    "firstSeen": "2026-09-29T09:16:14.778Z",
+    "lastSeen": "2026-09-29T09:19:24.803Z",
+    "seenCount": 26,
+    "lastNotified": "2026-09-29T09:16:14.778Z"
+  },
+  {
+    "id": "management development program (mdp)-pt bank central asia tbk (bca)",
+    "title": "MANAGEMENT DEVELOPMENT PROGRAM (MDP)",
+    "company": "PT Bank Central Asia Tbk (BCA)",
+    "firstSeen": "2026-09-29T09:16:14.778Z",
+    "lastSeen": "2026-09-29T09:19:24.803Z",
+    "seenCount": 26,
+    "lastNotified": "2026-09-29T09:16:14.778Z"
+  },
+  {
+    "id": "field collection bank mandiri penempatan subang-pt puriasri bhaktikarya",
+    "title": "FIELD COLLECTION BANK MANDIRI PENEMPATAN SUBANG",
+    "company": "PT Puriasri Bhaktikarya",
+    "firstSeen": "2026-09-29T09:16:14.778Z",
+    "lastSeen": "2026-09-29T09:19:24.803Z",
+    "seenCount": 26,
+    "lastNotified": "2026-09-29T09:16:14.778Z"
+  },
+  {
+    "id": "magang bakti customer service - pembukaan rekening online-pt bank central asia tbk (bca)",
+    "title": "MAGANG BAKTI CUSTOMER SERVICE - PEMBUKAAN REKENING ONLINE",
+    "company": "PT Bank Central Asia Tbk (BCA)",
+    "firstSeen": "2026-09-29T09:16:14.778Z",
+    "lastSeen": "2026-09-29T09:19:24.803Z",
+    "seenCount": 26,
+    "lastNotified": "2026-09-29T09:16:14.778Z"
+  },
+  {
+    "id": "magang bakti (frontliner)-pt bank central asia tbk (bca)",
+    "title": "MAGANG BAKTI (Frontliner)",
+    "company": "PT Bank Central Asia Tbk (BCA)",
+    "firstSeen": "2026-09-29T09:16:14.778Z",
+    "lastSeen": "2026-09-29T09:19:24.803Z",
+    "seenCount": 13,
+    "lastNotified": "2026-09-29T09:16:14.778Z"
+  },
+  {
+    "id": "recruitment staff-pt puriasri bhaktikarya",
+    "title": "RECRUITMENT STAFF",
+    "company": "PT Puriasri Bhaktikarya",
+    "firstSeen": "2026-09-29T09:16:17.395Z",
+    "lastSeen": "2026-09-29T09:19:24.803Z",
+    "seenCount": 13,
+    "lastNotified": "2026-09-29T09:16:17.395Z"
   }
 ]
