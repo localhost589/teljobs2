@@ -1,41 +1,5 @@
 [
   {
-    "id": "rider kopi keliling-fourme coffee",
-    "title": "Rider kopi keliling",
-    "company": "Fourme Coffee",
-    "firstSeen": "2026-08-24T03:46:41.668Z",
-    "lastSeen": "2026-08-31T00:03:22.178Z",
-    "seenCount": 7,
-    "lastNotified": "2026-08-24T03:46:41.668Z"
-  },
-  {
-    "id": "sales merchandiser ( brand alamii)-pt. anugrah indo distribusi",
-    "title": "Sales Merchandiser ( Brand Alamii)",
-    "company": "PT. Anugrah Indo Distribusi",
-    "firstSeen": "2026-08-24T03:46:41.668Z",
-    "lastSeen": "2026-09-06T07:26:51.721Z",
-    "seenCount": 6,
-    "lastNotified": "2026-08-24T03:46:41.668Z"
-  },
-  {
-    "id": "sales assistant-pt. puri indo teknik",
-    "title": "Sales Assistant",
-    "company": "PT. Puri Indo Teknik",
-    "firstSeen": "2026-08-24T03:46:41.668Z",
-    "lastSeen": "2026-08-24T03:46:41.668Z",
-    "seenCount": 1,
-    "lastNotified": "2026-08-24T03:46:41.668Z"
-  },
-  {
-    "id": "baker-pt. adonan juara indonesia",
-    "title": "Baker",
-    "company": "PT. Adonan Juara Indonesia",
-    "firstSeen": "2026-08-24T03:46:41.668Z",
-    "lastSeen": "2026-08-24T03:46:41.668Z",
-    "seenCount": 1,
-    "lastNotified": "2026-08-24T03:46:41.668Z"
-  },
-  {
     "id": "pekerja harian-pink bento",
     "title": "PEKERJA HARIAN",
     "company": "Pink Bento",
@@ -5224,8 +5188,8 @@
     "title": "Facebook",
     "company": "LokerMedan",
     "firstSeen": "2026-09-12T15:58:26.095Z",
-    "lastSeen": "2026-09-29T18:25:01.944Z",
-    "seenCount": 32,
+    "lastSeen": "2026-09-30T00:55:33.939Z",
+    "seenCount": 33,
     "lastNotified": "2026-09-12T15:58:26.095Z"
   },
   {
@@ -5233,8 +5197,8 @@
     "title": "Twitter",
     "company": "LokerMedan",
     "firstSeen": "2026-09-12T15:58:26.095Z",
-    "lastSeen": "2026-09-29T18:25:01.944Z",
-    "seenCount": 32,
+    "lastSeen": "2026-09-30T00:55:33.939Z",
+    "seenCount": 33,
     "lastNotified": "2026-09-12T15:58:26.095Z"
   },
   {
@@ -8950,8 +8914,8 @@
     "title": "RELATIONSHIP OFFICER PROGRAM",
     "company": "PT Bank Central Asia Tbk (BCA)",
     "firstSeen": "2026-09-29T09:16:14.778Z",
-    "lastSeen": "2026-09-29T18:25:50.338Z",
-    "seenCount": 52,
+    "lastSeen": "2026-09-30T00:56:21.883Z",
+    "seenCount": 78,
     "lastNotified": "2026-09-29T09:16:14.778Z"
   },
   {
@@ -8959,8 +8923,8 @@
     "title": "MANAGEMENT DEVELOPMENT PROGRAM (MDP)",
     "company": "PT Bank Central Asia Tbk (BCA)",
     "firstSeen": "2026-09-29T09:16:14.778Z",
-    "lastSeen": "2026-09-29T18:25:50.338Z",
-    "seenCount": 52,
+    "lastSeen": "2026-09-30T00:56:21.883Z",
+    "seenCount": 78,
     "lastNotified": "2026-09-29T09:16:14.778Z"
   },
   {
@@ -8968,8 +8932,8 @@
     "title": "FIELD COLLECTION BANK MANDIRI PENEMPATAN SUBANG",
     "company": "PT Puriasri Bhaktikarya",
     "firstSeen": "2026-09-29T09:16:14.778Z",
-    "lastSeen": "2026-09-29T18:25:50.338Z",
-    "seenCount": 52,
+    "lastSeen": "2026-09-30T00:56:21.883Z",
+    "seenCount": 78,
     "lastNotified": "2026-09-29T09:16:14.778Z"
   },
   {
@@ -8977,8 +8941,8 @@
     "title": "MAGANG BAKTI CUSTOMER SERVICE - PEMBUKAAN REKENING ONLINE",
     "company": "PT Bank Central Asia Tbk (BCA)",
     "firstSeen": "2026-09-29T09:16:14.778Z",
-    "lastSeen": "2026-09-29T18:25:50.338Z",
-    "seenCount": 39,
+    "lastSeen": "2026-09-30T00:56:21.883Z",
+    "seenCount": 52,
     "lastNotified": "2026-09-29T09:16:14.778Z"
   },
   {
@@ -8986,8 +8950,8 @@
     "title": "MAGANG BAKTI (Frontliner)",
     "company": "PT Bank Central Asia Tbk (BCA)",
     "firstSeen": "2026-09-29T09:16:14.778Z",
-    "lastSeen": "2026-09-29T18:25:50.338Z",
-    "seenCount": 26,
+    "lastSeen": "2026-09-30T00:56:21.883Z",
+    "seenCount": 39,
     "lastNotified": "2026-09-29T09:16:14.778Z"
   },
   {
@@ -8995,8 +8959,44 @@
     "title": "RECRUITMENT STAFF",
     "company": "PT Puriasri Bhaktikarya",
     "firstSeen": "2026-09-29T09:16:17.395Z",
-    "lastSeen": "2026-09-29T18:25:50.338Z",
-    "seenCount": 39,
+    "lastSeen": "2026-09-30T00:56:21.883Z",
+    "seenCount": 65,
     "lastNotified": "2026-09-29T09:16:17.395Z"
+  },
+  {
+    "id": "merchant business staff-pt bank central asia tbk (bca)",
+    "title": "MERCHANT BUSINESS STAFF",
+    "company": "PT Bank Central Asia Tbk (BCA)",
+    "firstSeen": "2026-09-30T00:53:03.193Z",
+    "lastSeen": "2026-09-30T00:56:21.883Z",
+    "seenCount": 13,
+    "lastNotified": "2026-09-30T00:53:03.193Z"
+  },
+  {
+    "id": "sales generalis bank mandiri penempatan karawang-pt puriasri bhaktikarya",
+    "title": "SALES GENERALIS BANK MANDIRI PENEMPATAN KARAWANG",
+    "company": "PT Puriasri Bhaktikarya",
+    "firstSeen": "2026-09-30T00:53:03.193Z",
+    "lastSeen": "2026-09-30T00:56:21.883Z",
+    "seenCount": 13,
+    "lastNotified": "2026-09-30T00:53:03.193Z"
+  },
+  {
+    "id": "sales generalis bank mandiri penempatan bekasi dan jatiwaringin-pt puriasri bhaktikarya",
+    "title": "SALES GENERALIS BANK MANDIRI PENEMPATAN BEKASI DAN JATIWARINGIN",
+    "company": "PT Puriasri Bhaktikarya",
+    "firstSeen": "2026-09-30T00:53:03.193Z",
+    "lastSeen": "2026-09-30T00:56:21.883Z",
+    "seenCount": 13,
+    "lastNotified": "2026-09-30T00:53:03.193Z"
+  },
+  {
+    "id": "sales generalis bank mandiri penempatan medan-pt puriasri bhaktikarya",
+    "title": "SALES GENERALIS BANK MANDIRI PENEMPATAN MEDAN",
+    "company": "PT Puriasri Bhaktikarya",
+    "firstSeen": "2026-09-30T00:53:03.194Z",
+    "lastSeen": "2026-09-30T00:56:21.883Z",
+    "seenCount": 13,
+    "lastNotified": "2026-09-30T00:53:03.194Z"
   }
 ]
