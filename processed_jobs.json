@@ -1,14 +1,5 @@
 [
   {
-    "id": "leader-pt unicom harbura jaya makmur",
-    "title": "Leader",
-    "company": "PT Unicom Harbura Jaya Makmur",
-    "firstSeen": "2026-08-24T03:46:44.218Z",
-    "lastSeen": "2026-08-24T03:46:44.218Z",
-    "seenCount": 1,
-    "lastNotified": "2026-08-24T03:46:44.218Z"
-  },
-  {
     "id": "creative social media (citraland gama city medan)-chicken holic",
     "title": "Creative Social Media (Citraland Gama City Medan)",
     "company": "Chicken Holic",
@@ -5179,8 +5170,8 @@
     "title": "Facebook",
     "company": "LokerMedan",
     "firstSeen": "2026-09-12T15:58:26.095Z",
-    "lastSeen": "2026-10-02T09:11:51.006Z",
-    "seenCount": 40,
+    "lastSeen": "2026-10-02T18:09:29.854Z",
+    "seenCount": 41,
     "lastNotified": "2026-09-12T15:58:26.095Z"
   },
   {
@@ -5188,8 +5179,8 @@
     "title": "Twitter",
     "company": "LokerMedan",
     "firstSeen": "2026-09-12T15:58:26.095Z",
-    "lastSeen": "2026-10-02T09:11:51.006Z",
-    "seenCount": 40,
+    "lastSeen": "2026-10-02T18:09:29.855Z",
+    "seenCount": 41,
     "lastNotified": "2026-09-12T15:58:26.095Z"
   },
   {
@@ -8905,8 +8896,8 @@
     "title": "RELATIONSHIP OFFICER PROGRAM",
     "company": "PT Bank Central Asia Tbk (BCA)",
     "firstSeen": "2026-09-29T09:16:14.778Z",
-    "lastSeen": "2026-10-02T09:12:36.496Z",
-    "seenCount": 260,
+    "lastSeen": "2026-10-02T18:10:14.825Z",
+    "seenCount": 286,
     "lastNotified": "2026-09-29T09:16:14.778Z"
   },
   {
@@ -8914,8 +8905,8 @@
     "title": "MANAGEMENT DEVELOPMENT PROGRAM (MDP)",
     "company": "PT Bank Central Asia Tbk (BCA)",
     "firstSeen": "2026-09-29T09:16:14.778Z",
-    "lastSeen": "2026-10-02T09:12:36.496Z",
-    "seenCount": 260,
+    "lastSeen": "2026-10-02T18:10:14.825Z",
+    "seenCount": 286,
     "lastNotified": "2026-09-29T09:16:14.778Z"
   },
   {
@@ -8995,8 +8986,17 @@
     "title": "Driver (Domisili Bali)",
     "company": "UD. Duta Pangan",
     "firstSeen": "2026-10-02T09:09:34.587Z",
-    "lastSeen": "2026-10-02T09:12:36.496Z",
-    "seenCount": 26,
+    "lastSeen": "2026-10-02T18:10:14.825Z",
+    "seenCount": 52,
     "lastNotified": "2026-10-02T09:09:34.587Z"
+  },
+  {
+    "id": "sales generalis bank mandiri penempatan kwala begumit-pt puriasri bhaktikarya",
+    "title": "SALES GENERALIS BANK MANDIRI PENEMPATAN KWALA BEGUMIT",
+    "company": "PT Puriasri Bhaktikarya",
+    "firstSeen": "2026-10-02T18:07:23.266Z",
+    "lastSeen": "2026-10-02T18:10:14.825Z",
+    "seenCount": 26,
+    "lastNotified": "2026-10-02T18:07:23.266Z"
   }
 ]
