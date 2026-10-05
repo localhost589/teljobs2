@@ -1,41 +1,5 @@
 [
   {
-    "id": "creative social media (citraland gama city medan)-chicken holic",
-    "title": "Creative Social Media (Citraland Gama City Medan)",
-    "company": "Chicken Holic",
-    "firstSeen": "2026-08-24T08:36:41.345Z",
-    "lastSeen": "2026-09-29T01:21:35.962Z",
-    "seenCount": 311,
-    "lastNotified": "2026-08-24T08:36:41.345Z"
-  },
-  {
-    "id": "warehouse administrasi staff-pt citra hannochs niagantara",
-    "title": "Warehouse Administrasi Staff",
-    "company": "PT CITRA HANNOCHS NIAGANTARA",
-    "firstSeen": "2026-08-24T08:37:15.762Z",
-    "lastSeen": "2026-09-29T01:22:11.375Z",
-    "seenCount": 94,
-    "lastNotified": "2026-08-24T08:37:15.762Z"
-  },
-  {
-    "id": "admin event (penempatan luar kota)-funderland indonesia",
-    "title": "ADMIN EVENT (PENEMPATAN LUAR KOTA)",
-    "company": "FUNDERLAND INDONESIA",
-    "firstSeen": "2026-08-24T08:38:01.961Z",
-    "lastSeen": "2026-09-25T00:11:19.223Z",
-    "seenCount": 26,
-    "lastNotified": "2026-08-24T08:38:01.961Z"
-  },
-  {
-    "id": "crew service (brastagi gatsu)-chicken holic",
-    "title": "Crew Service (Brastagi Gatsu)",
-    "company": "Chicken Holic",
-    "firstSeen": "2026-08-24T08:38:31.409Z",
-    "lastSeen": "2026-08-25T08:32:28.253Z",
-    "seenCount": 5,
-    "lastNotified": "2026-08-24T08:38:31.409Z"
-  },
-  {
     "id": "perawat rawat jalan-rumah sakit khusus mata prima vision",
     "title": "Perawat Rawat Jalan",
     "company": "Rumah Sakit Khusus Mata Prima Vision",
@@ -8998,5 +8962,41 @@
     "lastSeen": "2026-10-05T00:22:28.925Z",
     "seenCount": 234,
     "lastNotified": "2026-10-02T18:07:23.266Z"
+  },
+  {
+    "id": "sales generalis bank mandiri penempatan dumai-pt puriasri bhaktikarya",
+    "title": "SALES GENERALIS BANK MANDIRI PENEMPATAN DUMAI",
+    "company": "PT Puriasri Bhaktikarya",
+    "firstSeen": "2026-10-05T09:48:07.816Z",
+    "lastSeen": "2026-10-05T09:51:42.086Z",
+    "seenCount": 26,
+    "lastNotified": "2026-10-05T09:48:07.816Z"
+  },
+  {
+    "id": "sales generalis bank mandiri penempatan ujung tanjung-pt puriasri bhaktikarya",
+    "title": "SALES GENERALIS BANK MANDIRI PENEMPATAN UJUNG TANJUNG",
+    "company": "PT Puriasri Bhaktikarya",
+    "firstSeen": "2026-10-05T09:48:07.817Z",
+    "lastSeen": "2026-10-05T09:51:42.086Z",
+    "seenCount": 26,
+    "lastNotified": "2026-10-05T09:48:07.817Z"
+  },
+  {
+    "id": "sales generalis bank mandiri penempatan air tiris-pt puriasri bhaktikarya",
+    "title": "SALES GENERALIS BANK MANDIRI PENEMPATAN AIR TIRIS",
+    "company": "PT Puriasri Bhaktikarya",
+    "firstSeen": "2026-10-05T09:48:07.817Z",
+    "lastSeen": "2026-10-05T09:51:42.086Z",
+    "seenCount": 26,
+    "lastNotified": "2026-10-05T09:48:07.817Z"
+  },
+  {
+    "id": "sales generalis bank mandiri penempatan pamanukan-pt puriasri bhaktikarya",
+    "title": "SALES GENERALIS BANK MANDIRI PENEMPATAN PAMANUKAN",
+    "company": "PT Puriasri Bhaktikarya",
+    "firstSeen": "2026-10-05T09:48:07.817Z",
+    "lastSeen": "2026-10-05T09:51:42.086Z",
+    "seenCount": 26,
+    "lastNotified": "2026-10-05T09:48:07.817Z"
   }
 ]
